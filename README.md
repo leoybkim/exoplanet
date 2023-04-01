@@ -2,10 +2,11 @@
 
 Dataset source: https://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.html
 
-Dataset exported on **Fri Mar 31 2023**
+Dataset type: Planetary Systems Composite Parameters
 
-As of export date, there are currently **5312** confirmed exoplanets from 3981 different planetary systems!
+Dataset exported on **2023-04-01**
 
+As of export date, there are currently **5322** confirmed exoplanets from 3981 different planetary systems!
 
 
 | Column Name       | Table Label                                                 | Description                                                   | 
@@ -15,6 +16,7 @@ As of export date, there are currently **5312** confirmed exoplanets from 3981 d
 |sy_snum|            Number of Stars|                                              Number of stars in the planetary system|                        
 |sy_pnum|            Number of Planets|                                            Number of planets in the planetary system|
 |sy_mnum|            Number of Moons|                                              Number of moons in the planetary system|
+|cb_flag|            Circumbinary Flag|                                            Flag indicating whether the planet orbits a binary system (1=yes, 0=no)|
 |discoverymethod|    Discovery Method|                                             Method by which the planet was first identified|
 |disc_year|          Discovery Year|                                               Year the planet was discovered|
 |disc_locale|        Discovery Locale|                                             Location of observation of planet discovery (Ground or Space)|
@@ -43,22 +45,18 @@ As of export date, there are currently **5312** confirmed exoplanets from 3981 d
 |pl_radeerr1|        Planet Radius Upper Unc. [Earth Radius]|                      |            
 |pl_radeerr2|        Planet Radius Lower Unc. [Earth Radius]|                      |            
 |pl_radelim|         Planet Radius Limit Flag|                                     | 
-|pl_masse|           Planet Mass [Earth Mass]|                                     Amount of matter contained in the planet, measured in units of masses of the Earth|
-|pl_masseerr1|       Planet Mass [Earth Mass] Upper Unc.|                          |        
-|pl_masseerr2|       Planet Mass [Earth Mass] Lower Unc.|                          |        
-|pl_masselim|        Planet Mass [Earth Mass] Limit Flag|                          | 
-|pl_msinie|          Planet Mass\*sin(i) [Earth Mass]|                             Minimum mass of a planet as measured by radial velocity, measured in units of masses of the Earth| 
-|pl_msinieerr1|      Planet Mass\*sin(i) [Earth Mass] Upper Unc.|                  |
-|pl_msinieerr2|      Planet Mass\*sin(i) [Earth Mass] Lower Unc.|                  | 
-|pl_msinielim|       Planet Mass\*sin(i) [Earth Mass] Limit Flag|                  |
-|pl_cmasse|          Planet Mass\*sin(i)/sin(i) [Earth Mass]|                      A calculated quantity indicating the quotient of the lower limit of the measured planet mass, denoted as its mass times the sine of its inclination, and the sine of its inclination, measured in units of the mass of the Earth. This is specified for references in which the inclination is provided as well as the planet mass limit, but the true mass is not reported.|
-|pl_cmasseerr1|      Planet Mass\*sin(i)/sin(i) [Earth Mass] Upper Unc.|           | 
-|pl_cmasseerr2|      Planet Mass\*sin(i)/sin(i) [Earth Mass] Lower Unc.|           |
-|pl_cmasselim|       Planet Mass\*sin(i)/sin(i) [Earth Mass] Limit Flag|           |
+|pl_radj|            Planet Radius [Jupiter Radius]|                               Length of a line segment from the center of the planet to its surface, measured in units of radius of Jupiter|
+|pl_radjerr1|        Planet Radius Upper Unc. [Jupiter Radius]|                    |
+|pl_radjerr2|        Planet Radius Lower Unc. [Jupiter Radius]|                    |
+|pl_radjlim|         Planet Radius Limit Flag|                                     |
 |pl_bmasse|          Planet Mass or Mass\*sin(i) [Earth Mass]|                     Best planet mass estimate available, in order of preference: Mass, M\*sin(i)/sin(i), or M\*sin(i), depending on availability, and measured in Earth masses|   
 |pl_bmasseerr1|      Planet Mass or Mass\*sin(i) [Earth Mass] Upper Unc.|          |
 |pl_bmasseerr2|      Planet Mass or Mass\*sin(i) [Earth Mass] Lower Unc.|          |
 |pl_bmasselim|       Planet Mass or Mass\*sin(i) [Earth Mass] Limit Flag|          |
+|pl_bmassj|          Planet Mass or Mass\*sin(i) [Jupiter Mass]|                   Best planet mass estimate available, in order of preference: Mass, M\*sin(i)/sin(i), or M\*sin(i), depending on availability, and measured in Jupiter masses|   
+|pl_bmassjerr1|      Planet Mass or Mass\*sin(i) [Jupiter Mass] Upper Unc.|        |
+|pl_bmassjerr2|      Planet Mass or Mass\*sin(i) [Jupiter Mass] Lower Unc.|        |
+|pl_bmassjlim|       Planet Mass or Mass\*sin(i) [Jupiter Mass] Limit Flag|        |
 |pl_bmassprov|       Planet Mass or Mass\*sin(i) Provenance|                       Provenance of the measurement of the best mass. Options are: Mass, M\*sin(i)/sin(i), and M\*sin(i)|
 |pl_dens|            Planet Density [g/cm\*\*3]|                                   Amount of mass per unit of volume of the planet|  
 |pl_denserr1|        Planet Density Upper Unc. [g/cm\*\*3]|                        |          
@@ -84,7 +82,6 @@ As of export date, there are currently **5312** confirmed exoplanets from 3981 d
 |pl_tranmiderr1|     Transit Midpoint Upper Unc. [days]|                           | 
 |pl_tranmiderr2|     Transit Midpoint Lower Unc. [days]|                           |
 |pl_tranmidlim|      Transit Midpoint Limit Flag|                                  |
-|pl_tsystemref|      Time Reference Frame and Standard|                            Time system basis for temporal and orbital parameters|
 |ttv_flag|           Data show Transit Timing Variations|                          Flag indicating if the planet orbit exhibits transit timing variations from another planet in the system (1=yes, 0=no). Note: Non-transiting planets discovered via the transit timing variations of another planet in the system will not have their TTV flag set, since they do not themselves demonstrate TTVs.|
 |pl_imppar|          Impact Parameter|                                             The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the stellar radius|
 |pl_impparerr1|      Impact Parameter Upper Unc.|                                  |
@@ -194,6 +191,9 @@ As of export date, there are currently **5312** confirmed exoplanets from 3981 d
 |sy_dist|            Distance [pc]|                                                Distance to the planetary system in units of parsecs| 
 |sy_disterr1|        Distance [pc] Upper Unc|                                      |
 |sy_disterr2|        Distance [pc] Lower Unc|                                      |
+|sy_plx|             Parallax [mas]|                                               Difference in the angular position of a star as measured at two opposite positions within the Earth's orbit| 
+|sy_plxerr1|         Parallax [mas] Upper Unc|                                     |
+|sy_plxerr2|         Parallax [mas] Lower Unc|                                     |
 |sy_bmag|            B (Johnson) Magnitude|                                        Brightness of the host star as measured using the B (Johnson) band in units of magnitudes|
 |sy_bmagerr1|        B (Johnson) Magnitude Upper Unc|                              |
 |sy_bmagerr2|        B (Johnson) Magnitude Lower Unc|                              |
@@ -248,6 +248,8 @@ As of export date, there are currently **5312** confirmed exoplanets from 3981 d
 |sy_kepmag|          Kepler Magnitude|                                             Brightness of the host star as measured using the Kepler bandpass, in units of magnitudes|
 |sy_kepmagerr1|      Kepler Magnitude Upper Unc|                                   |
 |sy_kepmagerr2|      Kepler Magnitude Lower Unc|                                   |
+
+
 
 
 All other data source: https://exoplanets.nasa.gov/
