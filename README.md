@@ -252,4 +252,8 @@ As of export date, there are currently **5322** confirmed exoplanets from 3981 d
 
 
 
-All other data source: https://exoplanets.nasa.gov/
+<ins>References:</ins>
+- https://exoplanets.nasa.gov/
+- https://en.wikipedia.org/wiki/Orbital_elements
+- https://en.wikipedia.org/wiki/Exoplanet_orbital_and_physical_parameters
+- https://en.wikipedia.org/wiki/Stellar_classification
