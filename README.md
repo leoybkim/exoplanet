@@ -6,7 +6,7 @@ Dataset type: Planetary Systems Composite Parameters
 
 Dataset exported on **2023-04-01**
 
-As of export date, there are currently **5322** confirmed exoplanets from 3981 different planetary systems!
+As of export date, there are currently **5322** confirmed exoplanets from 3989 different planetary systems!
 
 
 | Column Name       | Table Label                                                 | Description                                                   | 
