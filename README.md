@@ -1,4 +1,38 @@
-# NASA Exoplanet Archive
+# Exploratory Data Analysis on NASA Exoplanet Archive
+
+## Overview
+
+Hi there!
+
+Before diving into my Jupyter notebook, I'd like to provide a quick disclaimer. I want to clarify that while I am an enthusiastic learner who is eager to improve my data analysis skills and expand my knowledge of space, I am not an expert in this field.
+
+Even though I have made an effort to ensure the accuracy of my analysis, there may be errors or omissions, and my interpretations of the data may not be entirely accurate.
+
+As a result, please take my analysis with a grain of salt and do not rely on it for scientific or research purposes without consulting with domain experts. If you have any questions or feedback, please feel free to reach out to me.
+
+I hope you find my notebook informative and enjoyable!
+
+## Quick Start
+
+```bash
+# Create virtual environement
+python -m venv venv/exoplanet
+
+# Activate virtual environment
+source venv/exoplanet/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create kernel for jupyter lab
+python -m ipykernel install --user --name exoplanet --display-name "exoplanet (venv)"
+
+# Start jupyter lab
+jupyter-lab
+```
+
+
+## NASA Exoplanet Archive
 
 Dataset source: https://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.html
 
@@ -6,8 +40,7 @@ Dataset type: Planetary Systems Composite Parameters
 
 Dataset exported on **2023-04-01**
 
-As of export date, there are currently **5322** confirmed exoplanets from 3989 different planetary systems!
-
+## Dataset Column Definitions
 
 | Column Name       | Table Label                                                 | Description                                                   | 
 |:------------------|:------------------------------------------------------------|:--------------------------------------------------------------|
@@ -257,3 +290,4 @@ As of export date, there are currently **5322** confirmed exoplanets from 3989 d
 - https://en.wikipedia.org/wiki/Orbital_elements
 - https://en.wikipedia.org/wiki/Exoplanet_orbital_and_physical_parameters
 - https://en.wikipedia.org/wiki/Stellar_classification
+- https://en.wikipedia.org/wiki/Correlation_coefficient
