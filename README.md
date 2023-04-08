@@ -38,6 +38,8 @@ Dataset source: https://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.htm
 
 Dataset type: Planetary Systems Composite Parameters
 
+Dataset: [exoplanet_dataset.csv](exoplanet_dataset.csv)
+
 Dataset exported on **2023-04-01**
 
 ## Dataset Column Definitions
@@ -281,6 +283,17 @@ Dataset exported on **2023-04-01**
 |sy_kepmag|          Kepler Magnitude|                                             Brightness of the host star as measured using the Kepler bandpass, in units of magnitudes|
 |sy_kepmagerr1|      Kepler Magnitude Upper Unc|                                   |
 |sy_kepmagerr2|      Kepler Magnitude Lower Unc|                                   |
+
+
+## NASA Exoplanet Catalog
+
+Data source: [NASA's exoplanet catalog](https://exoplanets.nasa.gov/discovery/exoplanet-catalog/)
+
+Webscraper script: [web_scraper.py](/web_scraping/web_scraper.py)
+
+Dataset: [nasa_exoplanet_catalog.csv](/web_scrapgin/nasa_exoplanet_catalog.csv)
+
+Data web-scraped on **2023-04-06**
 
 
 
