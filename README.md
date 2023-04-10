@@ -304,3 +304,4 @@ Data web-scraped on **2023-04-06**
 - https://en.wikipedia.org/wiki/Exoplanet_orbital_and_physical_parameters
 - https://en.wikipedia.org/wiki/Stellar_classification
 - https://en.wikipedia.org/wiki/Correlation_coefficient
+- https://www.nasa.gov/kepler/overview/abouttransits
